@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/logsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <!--Add a lock button with lock / unlock icon to show whether row can be edited or not
+    and give the ability to lock editing-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            //Row 0
+            <RelativeLayout
+                android:id="@+id/relativeLayout0"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow0"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row0Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow0"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row0Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row0Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row0Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row0Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row0Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row0Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row0Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row0Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row0LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row0Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row0DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row0LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row0-->
+                <TextView
+                    android:id="@+id/weight0tv"
+                    android:layout_below="@id/exerciseSpinnerRow0"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row0Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row0Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow0"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row0Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row0Set2_EditTxt"
+                    android:layout_toRightOf="@id/row0Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row0Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row0Set3_EditTxt"
+                    android:layout_toRightOf="@id/row0Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row0Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row0Set4_EditTxt"
+                    android:layout_toRightOf="@id/row0Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row0Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row0Set5_EditTxt"
+                    android:layout_toRightOf="@id/row0Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+
+            </RelativeLayout>
+
+            //Row 1
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow1"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row1Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow1"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row1Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row1Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row1Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row1Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row1Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row1Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row1Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row1Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row1LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row1Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row1DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row1LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row1-->
+                <TextView
+                    android:id="@+id/weight1tv"
+                    android:layout_below="@id/exerciseSpinnerRow1"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row1Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row1Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow1"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row1Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row1Set2_EditTxt"
+                    android:layout_toRightOf="@id/row1Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row1Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row1Set3_EditTxt"
+                    android:layout_toRightOf="@id/row1Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row1Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row1Set4_EditTxt"
+                    android:layout_toRightOf="@id/row1Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row1Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row1Set5_EditTxt"
+                    android:layout_toRightOf="@id/row1Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 2
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow2"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row2Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow2"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row2Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row2Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row2Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row2Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row2Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row2Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row2Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row2Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row2LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row2Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row2DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row2LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row2-->
+                <TextView
+                    android:id="@+id/weight2tv"
+                    android:layout_below="@id/exerciseSpinnerRow2"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row2Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row2Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow2"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row2Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row2Set2_EditTxt"
+                    android:layout_toRightOf="@id/row2Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row2Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row2Set3_EditTxt"
+                    android:layout_toRightOf="@id/row2Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row2Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row2Set4_EditTxt"
+                    android:layout_toRightOf="@id/row2Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row2Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row2Set5_EditTxt"
+                    android:layout_toRightOf="@id/row2Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 3
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow3"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row3Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow3"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row3Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row3Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row3Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row3Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row3Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row3Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row3Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row3Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row3LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row3Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row3DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row3LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row3-->
+                <TextView
+                    android:id="@+id/weight3tv"
+                    android:layout_below="@id/exerciseSpinnerRow3"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row3Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row3Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow3"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row3Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row3Set2_EditTxt"
+                    android:layout_toRightOf="@id/row3Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row3Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row3Set3_EditTxt"
+                    android:layout_toRightOf="@id/row3Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row3Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row3Set4_EditTxt"
+                    android:layout_toRightOf="@id/row3Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row3Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row3Set5_EditTxt"
+                    android:layout_toRightOf="@id/row3Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 4
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow4"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row4Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow4"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row4Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row4Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row4Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row4Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row4Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row4Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row4Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row4Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row4LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row4Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row4DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row4LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row4-->
+                <TextView
+                    android:id="@+id/weight4tv"
+                    android:layout_below="@id/exerciseSpinnerRow4"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row4Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row4Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow4"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row4Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row4Set2_EditTxt"
+                    android:layout_toRightOf="@id/row4Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row4Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row4Set3_EditTxt"
+                    android:layout_toRightOf="@id/row4Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row4Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row4Set4_EditTxt"
+                    android:layout_toRightOf="@id/row4Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row4Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row4Set5_EditTxt"
+                    android:layout_toRightOf="@id/row4Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 5
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow5"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row5Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow5"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row5Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row5Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row5Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row5Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row5Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row5Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row5Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row5Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row5LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row5Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row5DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row5LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row5-->
+                <TextView
+                    android:id="@+id/weight5tv"
+                    android:layout_below="@id/exerciseSpinnerRow5"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row5Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row5Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow5"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row5Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row5Set2_EditTxt"
+                    android:layout_toRightOf="@id/row5Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row5Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row5Set3_EditTxt"
+                    android:layout_toRightOf="@id/row5Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row5Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row5Set4_EditTxt"
+                    android:layout_toRightOf="@id/row5Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row5Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row5Set5_EditTxt"
+                    android:layout_toRightOf="@id/row5Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 6
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow6"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row6Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow6"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row6Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row6Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row6Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row6Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row6Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row6Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row6Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row6Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row6LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row6Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row6DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row6LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row6-->
+                <TextView
+                    android:id="@+id/weight6tv"
+                    android:layout_below="@id/exerciseSpinnerRow6"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row6Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row6Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow6"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row6Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row6Set2_EditTxt"
+                    android:layout_toRightOf="@id/row6Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row6Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row6Set3_EditTxt"
+                    android:layout_toRightOf="@id/row6Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row6Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row6Set4_EditTxt"
+                    android:layout_toRightOf="@id/row6Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row6Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row6Set5_EditTxt"
+                    android:layout_toRightOf="@id/row6Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 7
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow7"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row7Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow7"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row7Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row7Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row7Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row7Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row7Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row7Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row7Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row7Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row7LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row7Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row7DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row7LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row7-->
+                <TextView
+                    android:id="@+id/weight7tv"
+                    android:layout_below="@id/exerciseSpinnerRow7"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row7Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row7Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow7"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row7Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row7Set2_EditTxt"
+                    android:layout_toRightOf="@id/row7Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row7Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row7Set3_EditTxt"
+                    android:layout_toRightOf="@id/row7Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row7Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row7Set4_EditTxt"
+                    android:layout_toRightOf="@id/row7Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row7Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row7Set5_EditTxt"
+                    android:layout_toRightOf="@id/row7Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 8
+            <RelativeLayout
+                android:id="@+id/relativeLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow8"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row8Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow8"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row8Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row8Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row8Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row8Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row8Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row8Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row8Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row8Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row8LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row8Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row8DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row8LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row8-->
+                <TextView
+                    android:id="@+id/weight8tv"
+                    android:layout_below="@id/exerciseSpinnerRow8"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row8Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row8Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow8"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row8Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row8Set2_EditTxt"
+                    android:layout_toRightOf="@id/row8Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row8Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row8Set3_EditTxt"
+                    android:layout_toRightOf="@id/row8Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row8Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row8Set4_EditTxt"
+                    android:layout_toRightOf="@id/row8Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row8Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row8Set5_EditTxt"
+                    android:layout_toRightOf="@id/row8Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            //Row 9
+            <RelativeLayout
+                android:id="@+id/relativeLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/exerciseSpinnerRow9"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/row9Set1_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow9"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row9Set2_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row9Set1_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row9Set3_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row9Set2_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row9Set4_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row9Set3_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/row9Set5_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/row9Set4_EditTxt"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/row9LockButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row9Set5_EditTxt"
+                    app:srcCompat="@drawable/iconfinder_53__safety__security__unlock__unlocked_2538716" />
+
+                <Button
+                    android:id="@+id/row9DelBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/row9LockButton"
+                    android:text="X"
+                    android:textColor="@color/colorAccent" />
+
+                <!--Weight row9-->
+                <TextView
+                    android:id="@+id/weight9tv"
+                    android:layout_below="@id/exerciseSpinnerRow9"
+                    android:layout_width="120dp"
+                    android:layout_height="20dp"
+                    android:textSize="10sp"
+                    android:textAlignment="center"
+                    android:text="Weight" />
+
+                <EditText
+                    android:id="@+id/row9Set1wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row9Set1_EditTxt"
+                    android:layout_toRightOf="@id/exerciseSpinnerRow9"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row9Set2wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row9Set2_EditTxt"
+                    android:layout_toRightOf="@id/row9Set1wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row9Set3wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row9Set3_EditTxt"
+                    android:layout_toRightOf="@id/row9Set2wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row9Set4wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row9Set4_EditTxt"
+                    android:layout_toRightOf="@id/row9Set3wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+                <EditText
+                    android:id="@+id/row9Set5wt_EditTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/row9Set5_EditTxt"
+                    android:layout_toRightOf="@id/row9Set4wt_EditTxt"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Button
+                    android:id="@+id/addRowButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add Row" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+    <!--https://www.iconfinder.com/iconsets/security-double-colour-blue-black-vol-1
+    NEED TO ATTRIBUTE ICONIC HUB
+    -->

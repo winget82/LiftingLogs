@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/logsToolbar">
+
+        <!-- "Mark Favorite", should appear as action button if possible -->
+        <item
+            android:id="@+id/logstoolbar_Home"
+            android:title="@string/toolbar_home"
+            app:showAsAction="never" />
+
+    </group>
+
+</menu>

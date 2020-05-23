@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/my_toolbar">
+
+        <!-- "Mark Favorite", should appear as action button if possible -->
+        <item
+            android:id="@+id/toolbar_profile"
+            android:title="@string/toolbar_profile"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/toolbar_logDate"
+            android:title="@string/toolbar_logDate"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/toolbar_currentLog"
+            android:title="@string/toolbar_currentLog"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/toolbar_graph"
+            android:title="@string/toolbar_graph"
+            app:showAsAction="never"/>
+
+        <!-- Settings, should always be in the overflow -->
+        <item android:id="@+id/toolbar_settings"
+            android:title="@string/toolbar_settings"
+            app:showAsAction="never"/>
+
+    </group>
+
+</menu>

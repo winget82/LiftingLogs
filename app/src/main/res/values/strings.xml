@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LiftingLogs</string>
+    <string name="toolbar_profile">Profile</string>
+    <string name="toolbar_logDate">Log Date</string>
+    <string name="toolbar_currentLog">Log</string>
+    <string name="toolbar_graph">Graph</string>
+    <string name="toolbar_settings">Settings</string>
+    <string name="toolbar_home">Home</string>
+    <string name="split_a"> Split A selected</string>
+</resources>

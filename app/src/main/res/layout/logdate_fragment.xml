@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logdate_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <DatePicker
+        android:id="@+id/logDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="35dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:headerBackground="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/selectDateBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selectedDate_TV"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="#FF005A"
+        app:layout_constraintBottom_toTopOf="@+id/selectDateBtn"
+        app:layout_constraintStart_toStartOf="@+id/logDatePicker"
+        app:layout_constraintTop_toBottomOf="@+id/logDatePicker" />
+    //Need to add text color to resources file
+
+    <Button
+        android:id="@+id/selectDateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="Select Date"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logDatePicker" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="91dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectDateBtn">
+
+        <RadioButton
+            android:id="@+id/splitA_radioBtn"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Split A" />
+
+        <RadioButton
+            android:id="@+id/splitB_radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Split B" />
+
+        <RadioButton
+            android:id="@+id/splitC_radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Split C" />
+
+    </RadioGroup>
+
+
+    //This one will set the current date being logged in the app
+    //IF AN OLD DATE IS PICKED, IT WILL AUTOMATICALLY LOAD THE DATA SAVED FOR THAT DATE INTO THE APP
+    //FOR USE IN ALL FRAGMENTS
+    //WILL NEED A SPLIT OPTION FOR UP TO 3 SPLITS PER DATE A, B, AND C
+
+</androidx.constraintlayout.widget.ConstraintLayout>
